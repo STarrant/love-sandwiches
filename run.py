@@ -39,4 +39,10 @@ def validate_data(values):
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
 
+    try:
+        for value in values:
+            int(value)
+    except ValueError as e:
+        print(f"Invalid entry: {e}, please enter a whole number.\n")
+
 get_sales_data()
